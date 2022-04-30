@@ -16,6 +16,7 @@ Window::Window(QWidget *parent)
     ui->tableView_Softwares->setModel(&m_filterModel);
     ui->tableView_Softwares->setItemDelegateForColumn(1, new ComboBoxDelegate);
     ui->tableView_Softwares->horizontalHeader()->setHorizontalScrollBarPolicy(Qt::ScrollBarPolicy::ScrollBarAlwaysOff);
+    ui->tableView_Softwares->setSelectionMode(QTableView::NoSelection);
 
 //    ui->pushButton_filter->setCheckable(true);
 
@@ -99,7 +100,9 @@ void Window::loadModel()
         options.removeLast();
         auto item = new QStandardItem(current);
         item->setData(options, Qt::UserRole);
-        m_model.appendRow({new QStandardItem(parts[0]), item});
+        auto item2 = new QStandardItem(parts[0]);
+        item2->setFlags(Qt::ItemIsSelectable | Qt::ItemIsEnabled);
+        m_model.appendRow({item2, item});
     }
     connect(&m_model, &QAbstractItemModel::dataChanged, this, &Window::onDataChanged);
 }
