@@ -132,7 +132,7 @@ bool Window::eventFilter(QObject *obj, QEvent *event)
 {
     if(event->type() == QEvent::FocusOut)
     {
-        ui->pushButton_filter->setChecked(false);
+//        ui->pushButton_filter->setChecked(false);
         return false;
     }
     else

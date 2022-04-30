@@ -14,7 +14,8 @@
    <string>Window</string>
   </property>
   <property name="windowIcon">
-   <iconset theme="configure"/>
+   <iconset theme="configure">
+    <normaloff>.</normaloff>.</iconset>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
@@ -43,7 +44,8 @@
           <string/>
          </property>
          <property name="icon">
-          <iconset theme="view-filter"/>
+          <iconset theme="view-filter">
+           <normaloff>.</normaloff>.</iconset>
          </property>
         </widget>
        </item>
@@ -82,9 +84,6 @@
        <property name="text">
         <string/>
        </property>
-       <property name="pixmap">
-        <pixmap resource="resource.qrc">:/img/logo.png</pixmap>
-       </property>
        <property name="scaledContents">
         <bool>true</bool>
        </property>
@@ -117,7 +116,8 @@
           <string>Apply</string>
          </property>
          <property name="icon">
-          <iconset theme="document-save"/>
+          <iconset theme="document-save">
+           <normaloff>.</normaloff>.</iconset>
          </property>
         </widget>
        </item>
@@ -127,7 +127,8 @@
           <string>Close</string>
          </property>
          <property name="icon">
-          <iconset theme="window-close"/>
+          <iconset theme="window-close">
+           <normaloff>.</normaloff>.</iconset>
          </property>
         </widget>
        </item>
@@ -137,8 +138,6 @@
    </item>
   </layout>
  </widget>
- <resources>
-  <include location="resource.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>
